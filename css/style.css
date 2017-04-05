@@ -113,6 +113,14 @@ h6 {
 	cursor:pointer; /* otherwise it's not as obvious items can be clicked */
 }
 
+.item {
+	max-width:100%;
+}
+
+#Categorys div .videos {
+	display:flex;
+}
+
 .vitem {
 	margin: 20px;
 }

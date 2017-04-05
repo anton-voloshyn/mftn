@@ -37,7 +37,7 @@
 					<div id="Categorys">
 						<div class="item" ng-repeat="c in categories">
 							<h1>{{c.title}}</h1>
-							<div id="videos videos-in-{{c.id}}">
+							<div class="videos" id="videos videos-in-{{c.id}}">
 								<div class="vitem" ng-repeat="v in videos[c.id]"  ng-click="itemClicked($event)">
 									<img src="{{v.image_1}}" width="330" id="item-{{v.id}}" />
 								</div>

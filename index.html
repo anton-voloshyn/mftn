@@ -7,12 +7,14 @@
 		<title>Missions For The Nations</title>
 		<link rel="stylesheet" href="css/style.css">
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
+
+		<script src="js/index.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="js/app.js"></script>
 
-		<script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
 	</head>
 	<body ng-controller="netflixcontrol" ng-app="myApp" ng-keydown="itemKeyDown($event)">
 		<header class="header">
@@ -26,29 +28,29 @@
 			</div>
 		</header>
 		<div id="content">
-			<div class="my_carousel">
-				<div id="carousel">
-					<div id="live-streams">
-						<h1>Live Streams</h1>
-						<div class="item" ng-repeat="s in livestreams">
-							<img src="{{s.image}}" width="330" id="item-{{s.id}}" />
-						</div>
-					</div>
-					<div id="Categorys">
-						<div class="item" ng-repeat="c in categories">
-							<h1>{{c.title}}</h1>
-							<div class="videos" id="videos videos-in-{{c.id}}">
-								<div class="vitem" ng-repeat="v in videos[c.id]"  ng-click="itemClicked($event)">
-									<img src="{{v.image_1}}" width="330" id="item-{{v.id}}" />
-								</div>
-							</div>
-						</div>
+			<div id="live-streams">
+				<h1>Live Streams</h1>
+				<div class="item" ng-repeat="s in livestreams">
+					<img src="{{s.image}}" width="330" id="item-{{s.id}}" />
+				</div>
+			</div>
+			<div id="Categorys">
+					<div class="item" ng-repeat="c in categories" category-directive>
+						<h1>{{c.title}}</h1>
+						<div class="carousel videos" id="videos-in-{{c.id}}" catid="{{c.id}}">
+							<img class="vitem" ng-repeat="v in videos[c.id]" ng-click="itemClicked($event)" src="{{v.image_1}}" width="330" id="item-{{v.id}}" img-directive/>
 					</div>
 				</div>
 			</div>
-		</div>	
-
-
-		<script src="js/index.js"></script>
+		</div>
 	</body>
 </html>
+
+<!--															<img src="http://tvstartup.biz/mng-channel/vpanel/uploads/videos/mftn_Hand-Pump_1485802122176_640.jpg" width="330" id="item-1549"/>
+							<img src="http://tvstartup.biz/mng-channel/vpanel/uploads/videos/mftn_Being-Prepped-To-Be-Blessed_1485801839611_640.jpg" width="330" id="item-1548">-->
+
+<!--
+							<div class="vitem" ng-repeat="v in videos[c.id]" ng-click="itemClicked($event)">
+								<img src="{{v.image_1}}" width="330" id="item-{{v.id}}" />
+							</div>
+							-->

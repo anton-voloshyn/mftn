@@ -27,7 +27,7 @@ h6 {
 	margin-bottom: 30px;
 }
 
-.slick-slide {
+/*.slick-slide {
 	width: 380px !important;
 	margin-right: 30px;
 	border-radius: 10px;
@@ -36,7 +36,7 @@ h6 {
 .slick-slide > img {
 	border-radius: 10px;
 }
-
+*/
 .slick-current {
 	border: 10px inset white;
 }
@@ -82,8 +82,9 @@ h6 {
 	top: 0;
 }
 
-.selected {
+.selCat .selected {
 	border: 10px inset white;
+	margin: -10px;
 }
 
 #live-streams {
@@ -95,32 +96,48 @@ h6 {
 	z-index: 9999;
 }
 
-#Categorys div {
+/*#Categorys div {
 	width: auto;
 	display: inline-block;
 }
-
-#carousel {
-	width:100% !important;
+*/
+.carousel {
+/*	width:100% !important;
+	border:1px solid #222;
+	height:300px;
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	margin: 0 auto;*/
+        width:100%;
+/*        border:1px solid #222;*/
+        height:300px;
+        position:relative;
+        clear:both;
+        /*overflow:hidden;*/
+        /*background:#FFF;*/
+/*use	    width:100% !important;
 	height:100%;
 	position:relative;
 	clear:both;
 	overflow:hidden;
-	margin: 0 auto;
+	margin: 0 auto;*/
 }
-#carousel img {
-	/*				visibility:hidden;  hide images until carousel can handle them */
+
+.carousel img {
+/* 	visibility:hidden;  /*hide images until carousel can handle them */
 	cursor:pointer; /* otherwise it's not as obvious items can be clicked */
 }
 
-.item {
-	max-width:100%;
-}
-
+/*
 #Categorys div .videos {
 	display:flex;
-}
-
+}*/
+/*
 .vitem {
+	display:inline-block;
 	margin: 20px;
+	width:330px;
+	height:248px;
 }
+*/

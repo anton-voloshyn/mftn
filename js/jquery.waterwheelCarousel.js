@@ -220,6 +220,7 @@
               centerPosLeft = options.horizon - ($(this).data('original_width') / 2);
               centerPosTop = (data.containerHeight / 2) - ($(this).data('original_height') / 2);
             }
+            centerPosTop = 0; //
             $(this)
               // Apply positioning and layering to the images
               .css({
@@ -578,12 +579,12 @@
     $(document).keydown(function(e) {
       if (options.keyboardNav) {
         // arrow left or up
-        if ((e.which === 37 && options.orientation == 'horizontal') || (e.which === 38 && options.orientation == 'vertical')) {
+        if (curCategory === options.category && ((e.which === 37 && options.orientation == 'horizontal') || (e.which === 38 && options.orientation == 'vertical'))) {
           autoPlay(true);
           options.autoPlay = 0;
           moveOnce('backward');
         // arrow right or down
-        } else if ((e.which === 39 && options.orientation == 'horizontal') || (e.which === 40 && options.orientation == 'vertical')) {
+        } else if (curCategory === options.category && ((e.which === 39 && options.orientation == 'horizontal') || (e.which === 40 && options.orientation == 'vertical'))) {
           autoPlay(true);
           options.autoPlay = 0;
           moveOnce('forward');
@@ -642,6 +643,7 @@
 
   $.fn.waterwheelCarousel.defaults = {
     // number tweeks to change apperance
+    category:                   0,
     startingItem:               1,   // item to place in the center of the carousel. Set to 0 for auto
     separation:                 175, // distance between items in carousel
     separationMultiplier:       0.6, // multipled by separation distance to increase/decrease distance for each additional item

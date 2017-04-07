@@ -1,0 +1,25 @@
+{
+  "name": "mftn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "testmftn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anton-voloshyn/mftn.git"
+  },
+  "keywords": [
+    "mftn",
+    "angularjs"
+  ],
+  "author": "anton.v",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anton-voloshyn/mftn/issues"
+  },
+  "homepage": "https://github.com/anton-voloshyn/mftn#readme"
+}
